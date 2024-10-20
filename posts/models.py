@@ -20,18 +20,3 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
-
-# class Follow(models.Model):
-#     follower = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='following', on_delete=models.CASCADE,null=True, blank=True)
-#     following = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='followers', on_delete=models.CASCADE,null=True, blank=True)
-#     followed_at = models.DateTimeField(auto_now_add=True)
-
-#     # class Meta:
-#     #     unique_together = ('follower', 'following')
-#     class Meta:
-#         constraints = [
-#             models.UniqueConstraint(fields=['follower', 'following'], name='unique_follow')
-#         ]
-
-#     def __str__(self):
-#         return f"{self.follower} follows {self.following}"
